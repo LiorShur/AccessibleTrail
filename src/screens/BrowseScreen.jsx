@@ -1,5 +1,5 @@
-import { useState, useCallback, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet';
+import { useState, useCallback, useMemo } from 'react';
+import { MapContainer, TileLayer, Marker, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import useTrailStore from '../store/useTrailStore';
 import AccessibilityBadges from '../components/AccessibilityBadges';
@@ -84,18 +84,21 @@ const DEMO_BROWSE_TRAILS = [
   },
 ];
 
-// Custom map pin icon
-const pinIcon = new L.DivIcon({
-  className: 'browse-pin',
-  html: '<span>\uD83D\uDCCD</span>',
-  iconSize: [28, 28],
-  iconAnchor: [14, 28],
-});
-
 export default function BrowseScreen() {
   const [activeFilters, setActiveFilters] = useState(['all']);
   const [selectedTrail, setSelectedTrail] = useState(null);
   const { selectedWaypoint, setSelectedWaypoint } = useTrailStore();
+
+  const pinIcon = useMemo(
+    () =>
+      new L.DivIcon({
+        className: 'browse-pin',
+        html: '<span>\uD83D\uDCCD</span>',
+        iconSize: [28, 28],
+        iconAnchor: [14, 28],
+      }),
+    []
+  );
 
   const toggleFilter = useCallback((key) => {
     setActiveFilters((prev) => {
