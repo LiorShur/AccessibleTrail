@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import BottomNav from './components/BottomNav';
 import HomeScreen from './screens/HomeScreen';
 import RecordScreen from './screens/RecordScreen';
@@ -9,7 +9,7 @@ import SettingsScreen from './screens/SettingsScreen';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/record" element={<RecordScreen />} />
@@ -19,6 +19,6 @@ export default function App() {
         <Route path="/settings" element={<SettingsScreen />} />
       </Routes>
       <BottomNav />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
