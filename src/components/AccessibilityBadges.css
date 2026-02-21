@@ -1,0 +1,38 @@
+.access-badges {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.access-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.62rem;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-ink);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.access-badge--green {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.access-badge--orange {
+  background: var(--color-warn-light);
+  border-color: var(--color-warn);
+  color: var(--color-warn);
+}
+
+.access-badge--more {
+  background: var(--color-paper-alt);
+  color: var(--color-muted);
+}
+
+.access-badge__label {
+  /* Hidden on very small badges — shown by default */
+}

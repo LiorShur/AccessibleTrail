@@ -1,0 +1,35 @@
+.seg-control {
+  display: flex;
+  border: 1.5px solid var(--color-ink);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.seg-opt {
+  flex: 1;
+  text-align: center;
+  padding: 8px 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-right: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  min-height: var(--min-touch);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+.seg-opt:last-child {
+  border-right: none;
+}
+
+.seg-opt--active {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}

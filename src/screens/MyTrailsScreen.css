@@ -1,0 +1,113 @@
+.my-trails {
+  flex: 1;
+  padding-bottom: var(--nav-height);
+}
+
+.my-trails__header {
+  padding: 16px;
+  border-bottom: 1.5px solid var(--color-ink);
+  background: var(--color-paper);
+}
+
+.my-trails__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.my-trails__count {
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.my-trails__filters {
+  display: flex;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1.5px solid var(--color-ink);
+  background: var(--color-paper);
+}
+
+.my-trails__filter {
+  padding: 6px 14px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--color-paper);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  min-height: 36px;
+}
+
+.my-trails__filter--active {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.my-trails__list {
+  padding: 0;
+}
+
+.my-trails__empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.my-trails__card {
+  margin: 10px 16px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: var(--radius-md);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.my-trails__card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.my-trails__card-top {
+  padding: 12px 14px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.my-trails__card-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.my-trails__card-meta {
+  font-size: 0.65rem;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.my-trails__status {
+  padding: 3px 8px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.my-trails__status--pub {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.my-trails__status--draft {
+  background: var(--color-paper-alt);
+  color: var(--color-muted);
+}
+
+.my-trails__card-access {
+  padding: 8px 14px 12px;
+  border-top: 1px solid var(--color-paper-alt);
+}
